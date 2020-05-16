@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:PragueTest.ViewModels"
+             mc:Ignorable="d"
+             x:Class="PragueTest.Views.AddOrderPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:CreateOrderVM x:Key="vm"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout BindingContext="{StaticResource vm}">
+            <!-- Place new controls here -->
+            <Label Text="REGNR"/>
+            <Entry Text="{Binding RegistrationNumber}" Placeholder="enter regnr"/>
+            <Label Text="Enter parkingspot"/>
+            <Entry Text="{Binding ParkingSpot}" Placeholder="enter parkingspot"/>
+            <Button x:Name="CreateOrderBtn" Text="Create order" Command="{Binding CreateOrdercmd}"/>
+
+            <ListView ItemsSource="{Binding Order}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding RegNr}" Detail="{Binding ParkSpot}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

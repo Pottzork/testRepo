@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:PragueTest.ViewModels"
+             mc:Ignorable="d"
+             x:Class="PragueTest.Views.GetAllOrdersPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:CreateOrderVM x:Key="vm"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="AllOrdersListView" BindingContext="{StaticResource vm}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="40" StyleId="1">
+                            <StackLayout Orientation="Horizontal" Margin="10,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Registration Number: "/>
+                                        <Label Text="{Binding RegistrationNumber, Mode=TwoWay}"/>
+                                        <Label Margin="100,0,0,0" Text="✔ Order Active" TextColor="DarkGreen"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Parking spot: "/>
+                                        <Label Text="{Binding ParkingSpot, Mode=TwoWay}"/>
+                                        <Label Margin="80,0,0,0" TextColor="DarkGreen"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Button Text="See Details"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

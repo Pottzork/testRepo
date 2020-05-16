@@ -1,0 +1,1 @@
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest.UWP\PragueTest.UWP.csproj;x86

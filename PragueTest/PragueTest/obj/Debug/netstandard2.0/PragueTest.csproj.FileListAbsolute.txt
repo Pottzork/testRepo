@@ -1,0 +1,17 @@
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\bin\Debug\netstandard2.0\PragueTest.deps.json
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\bin\Debug\netstandard2.0\PragueTest.dll
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\PragueTest.AssemblyInfoInputs.cache
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\PragueTest.AssemblyInfo.cs
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\bin\Debug\netstandard2.0\ref\PragueTest.dll
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\bin\Debug\netstandard2.0\PragueTest.pdb
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\PragueTest.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\PragueTest.dll
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\ref\PragueTest.dll
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\PragueTest.pdb
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\PragueTest.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\Views\AddOrderPage.xaml.g.cs
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest\obj\Debug\netstandard2.0\Views\GetAllOrdersPage.xaml.g.cs
