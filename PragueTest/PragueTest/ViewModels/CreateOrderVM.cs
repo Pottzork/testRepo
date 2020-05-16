@@ -17,10 +17,25 @@ namespace PragueTest.ViewModels
     {
         public Command CreateOrdercmd { get; set; }
         public Command ListAllOrderscmd { get; set; }
+        public Command DeleteOrdercmd { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public List<Orders> AllOrdersList = new List<Orders>();
+        //public List<Orders> AllOrdersList = new List<Orders>();
+
+        private Orders orders;
+
+        public Orders Orders
+        {
+            get { return orders; }
+            set { orders = value;
+                RegistrationNumber = orders.RegistrationNumber;
+                ParkingSpot = orders.ParkingSpot;
+                OnPropertyChanged("Orders");
+                }
+        }
+
+
 
         private string registrationNumber;
         public string RegistrationNumber
@@ -32,7 +47,7 @@ namespace PragueTest.ViewModels
         }
 
         private string parkingSpot;
-
+        CrudHelper helper = new CrudHelper();
   
         public string ParkingSpot
         {
@@ -40,44 +55,63 @@ namespace PragueTest.ViewModels
             set { parkingSpot = value; OnPropertyChanged("ParkingSpot"); }
         }
 
+
+
         public CreateOrderVM()
         {
-            CreateOrdercmd = new Command(async () => await CreateOrder());
-            ListAllOrderscmd = new Command(async () => await SeeAllOrders());
+            CreateOrdercmd = new Command(async () => await helper.CreateOrder(RegistrationNumber, ParkingSpot));
+            ListAllOrderscmd = new Command(async () => await helper.SeeAllOrders());
+            DeleteOrdercmd = new Command(async () => await helper.DeleteOrder(SelectedOrder));
         }
 
+        private Orders selectedOrder;
 
-
-        public async Task CreateOrder()
+        public Orders SelectedOrder
         {
-            var db = new SQLiteConnection(Constants.DatabasePath, Constants.Flags);
-            db.CreateTable<Orders>();
-
-            var maxPk = db.Table<Orders>().OrderByDescending(c => c.ID).FirstOrDefault();
-
-            Orders order = new Orders()
+            get { return selectedOrder; }
+            set
             {
-                ID = (maxPk == null ? 1 : maxPk.ID + 1), //om det inte finns ett item med id sålägger den till ett item med id 1, sen +1 för varje
-                RegistrationNumber = RegistrationNumber,
-                ParkingSpot = ParkingSpot
-            };
-
-            AllOrdersList.Add(order);
-
-            foreach (var item in AllOrdersList)
-            {
-                db.Insert(item);
+                selectedOrder = value;
+                OnPropertyChanged("SelectedOrder");
+                if (selectedOrder != null)
+                {
+                    App.Current.MainPage.Navigation.PushAsync(new OrderDetailPage(selectedOrder));
+                }
             }
-            
-            await App.Current.MainPage.DisplayAlert(null, order.RegistrationNumber + " Saved", "OK");
-            await Application.Current.MainPage.Navigation.PopAsync();
         }
 
-        private async Task SeeAllOrders()
-        {
-             //= db.Table<Orders>().OrderBy(x => x.RegistrationNumber).ToList();
-            await Application.Current.MainPage.Navigation.PushAsync(new GetAllOrdersPage());
-        }
+
+        //public async Task CreateOrder()
+        //{
+        //    var db = new SQLiteConnection(Constants.DatabasePath, Constants.Flags);
+        //    db.CreateTable<Orders>();
+
+        //    var maxPk = db.Table<Orders>().OrderByDescending(c => c.ID).FirstOrDefault();
+
+        //    Orders order = new Orders()
+        //    {
+        //        ID = (maxPk == null ? 1 : maxPk.ID + 1), //om det inte finns ett item med id sålägger den till ett item med id 1, sen +1 för varje
+        //        RegistrationNumber = RegistrationNumber,
+        //        ParkingSpot = ParkingSpot
+        //    };
+
+        //    AllOrdersList.Add(order);
+
+        //    foreach (var item in AllOrdersList)
+        //    {
+        //        db.Insert(item);
+        //    }
+
+        //    await App.Current.MainPage.DisplayAlert(null, order.RegistrationNumber + " Saved", "OK");
+        //    await Application.Current.MainPage.Navigation.PopAsync();
+        //}
+
+
+        //private async Task SeeAllOrders()
+        //{
+        //     //= db.Table<Orders>().OrderBy(x => x.RegistrationNumber).ToList();
+        //    await Application.Current.MainPage.Navigation.PushAsync(new GetAllOrdersPage());
+        //}
 
 
         private void OnPropertyChanged(string propertyName)

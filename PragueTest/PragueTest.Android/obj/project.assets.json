@@ -2230,24 +2230,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {},
+    "C:\\Users\\GetFitStayFitSWEDEN\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\source\\repos\\PragueTest\\PragueTest\\PragueTest.Android\\PragueTest.Android.csproj",
+      "projectUniqueName": "C:\\Users\\GetFitStayFitSWEDEN\\Desktop\\TestREPO\\testRepo\\PragueTest\\PragueTest.Android\\PragueTest.Android.csproj",
       "projectName": "PragueTest.Android",
-      "projectPath": "C:\\Users\\andre\\source\\repos\\PragueTest\\PragueTest\\PragueTest.Android\\PragueTest.Android.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\source\\repos\\PragueTest\\PragueTest\\PragueTest.Android\\obj\\",
+      "projectPath": "C:\\Users\\GetFitStayFitSWEDEN\\Desktop\\TestREPO\\testRepo\\PragueTest\\PragueTest.Android\\PragueTest.Android.csproj",
+      "packagesPath": "C:\\Users\\GetFitStayFitSWEDEN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GetFitStayFitSWEDEN\\Desktop\\TestREPO\\testRepo\\PragueTest\\PragueTest.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GetFitStayFitSWEDEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2261,8 +2261,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\andre\\source\\repos\\PragueTest\\PragueTest\\PragueTest\\PragueTest.csproj": {
-              "projectPath": "C:\\Users\\andre\\source\\repos\\PragueTest\\PragueTest\\PragueTest\\PragueTest.csproj"
+            "C:\\Users\\GetFitStayFitSWEDEN\\Desktop\\TestREPO\\testRepo\\PragueTest\\PragueTest\\PragueTest.csproj": {
+              "projectPath": "C:\\Users\\GetFitStayFitSWEDEN\\Desktop\\TestREPO\\testRepo\\PragueTest\\PragueTest\\PragueTest.csproj"
             }
           }
         }

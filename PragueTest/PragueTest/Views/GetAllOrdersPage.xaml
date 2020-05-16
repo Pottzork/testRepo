@@ -4,36 +4,37 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:PragueTest.ViewModels"
+             xmlns:vm1="clr-namespace:PragueTest.Services"
              mc:Ignorable="d"
              x:Class="PragueTest.Views.GetAllOrdersPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <vm:CreateOrderVM x:Key="vm"/>
+            <vm1:CrudHelper x:Key="vm1"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="AllOrdersListView" BindingContext="{StaticResource vm}">
+            <ListView x:Name="AllOrdersListView" SelectedItem="{Binding SelectedOrder, Mode=TwoWay}" BindingContext="{StaticResource vm}" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell Height="40" StyleId="1">
-                            <StackLayout Orientation="Horizontal" Margin="10,0">
-                                <StackLayout Orientation="Horizontal">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="Registration Number: "/>
-                                        <Label Text="{Binding RegistrationNumber, Mode=TwoWay}"/>
-                                        <Label Margin="100,0,0,0" Text="✔ Order Active" TextColor="DarkGreen"/>
-                                    </StackLayout>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="Parking spot: "/>
-                                        <Label Text="{Binding ParkingSpot, Mode=TwoWay}"/>
-                                        <Label Margin="80,0,0,0" TextColor="DarkGreen"/>
-                                    </StackLayout>
+                        <ViewCell Height="150" StyleId="1">
+                            <StackLayout Orientation="Vertical" Margin="10,0">
+                                <Frame HasShadow="True" BorderColor="Black" Margin="10" BackgroundColor="Azure" HeightRequest="100">
                                     <StackLayout Orientation="Vertical">
-                                        <Button Text="See Details"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Registration Number: "/>
+                                            <Label Text="{Binding RegistrationNumber, Mode=TwoWay}" HorizontalOptions="Start"/>
+                                            <Label Margin="20,0,0,0" Text="✔ Order Active" TextColor="DarkGreen" HorizontalOptions="End"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Parking spot: "/>
+                                            <Label Text="{Binding ParkingSpot, Mode=TwoWay}"/>
+                                            <Button Text="Delete Order" Command="{Binding DeleteOrdercmd}"/>
+                                        </StackLayout>
                                     </StackLayout>
-                                </StackLayout>
+                                </Frame>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

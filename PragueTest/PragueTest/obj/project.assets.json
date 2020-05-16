@@ -1024,23 +1024,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\GetFitStayFitSWEDEN\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\source\\repos\\PragueTest\\PragueTest\\PragueTest\\PragueTest.csproj",
+      "projectUniqueName": "C:\\Users\\GetFitStayFitSWEDEN\\Desktop\\TestREPO\\testRepo\\PragueTest\\PragueTest\\PragueTest.csproj",
       "projectName": "PragueTest",
-      "projectPath": "C:\\Users\\andre\\source\\repos\\PragueTest\\PragueTest\\PragueTest\\PragueTest.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\source\\repos\\PragueTest\\PragueTest\\PragueTest\\obj\\",
+      "projectPath": "C:\\Users\\GetFitStayFitSWEDEN\\Desktop\\TestREPO\\testRepo\\PragueTest\\PragueTest\\PragueTest.csproj",
+      "packagesPath": "C:\\Users\\GetFitStayFitSWEDEN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GetFitStayFitSWEDEN\\Desktop\\TestREPO\\testRepo\\PragueTest\\PragueTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GetFitStayFitSWEDEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1098,7 +1100,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   },

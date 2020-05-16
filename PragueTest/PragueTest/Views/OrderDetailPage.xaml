@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:PragueTest.ViewModels"
+             mc:Ignorable="d"
+             x:Class="PragueTest.Views.OrderDetailPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:CreateOrderVM x:Key="vm"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{StaticResource vm}">
+            <Frame HasShadow="True" BorderColor="Black" Margin="10" HeightRequest="250" BackgroundColor="LightGray">
+            <StackLayout Orientation="Vertical" >
+                <Label Text="RegistrationNumber: " FontAttributes="Bold" TextColor="Black"/>
+                <Label  Text="{Binding RegistrationNumber}" TextColor="Teal" FontSize="30"/>
+                <Label Text="ParkingSpot: " FontAttributes="Bold" TextColor="Black"/>
+                <Label  Text="{Binding ParkingSpot}" TextColor="Teal" FontSize="30"/>
+                    <Button x:Name="OrderCompleteButton" Text="Order Complete" BackgroundColor="SteelBlue" TextColor="White" FontAttributes="Bold"
+                            FontSize="10"
+                            HorizontalOptions="CenterAndExpand" Margin="0,50,0,0"
+                            />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

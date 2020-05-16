@@ -1,1 +1,1 @@
-C:\Users\andre\source\repos\PragueTest\PragueTest\PragueTest.UWP\PragueTest.UWP.csproj;x86
+C:\Users\GetFitStayFitSWEDEN\Desktop\TestREPO\testRepo\PragueTest\PragueTest.UWP\PragueTest.UWP.csproj;x86
